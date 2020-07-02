@@ -1,0 +1,22 @@
+header{
+	background-color: rgba(0%, 60%, 100%, 100%);
+}
+h1{
+	color: rgba(100%, 100%, 100%, 100%);
+	text-align: center;
+	text-transform: uppercase;
+}
+h2{
+	color: rgba(0%, 0%, 60%, 100%);
+	text-transform: uppercase;
+}
+img{
+	display: none;
+}
+section{
+	background-color: rgba(94%, 94%, 96%, 100%);
+}
+a{
+	background-color: rgba(60%, 80%, 100%, 100%);
+	color: rgba(100%, 100%, 100%, 100%);
+}
