@@ -162,8 +162,30 @@ body main div.card div.cardImageRight img{
 }
 
 @media only screen and (max-width: 768px) {
+	p{
+		font-size: calc(300% + 0.5vw);
+	}
+	body header nav a{
+		width: 20%;
+		margin: 1%;
+		padding: 0;
+		font-size: 150%;
+	}
 	body main aside{
 		background-size: auto 100%;
+	}
+	body main aside div p{
+		font-size: calc(150% + 0.5vw);
+	}
+	body main div.card div.cardTextLeft div.cardTextContainer h2{
+		font-size: calc(300% + 0.5vw);
+	}
+	body main div.card div.cardTextLeft div.cardTextContainer p{
+		font-size: calc(150% + 0.5vw);
+	}
+	body main div.card div.cardImageRight img{
+		width: 90%;
+		height: auto;
 	}
 }
 
@@ -175,8 +197,8 @@ body main div.card div.cardImageRight img{
 		height: 10vh;
 	}
 	body header nav a{
-		width: 20vw;
-		margin: 1vw;
+		width: 20%;
+		margin: 1%;
 		padding: 0;
 		font-size: 110%;
 	}
