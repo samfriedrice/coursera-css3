@@ -25,17 +25,18 @@ body header{
 	height: 15vh;
 	/* background-color: rgb(246, 239, 247); */
 	background-color: rgb(121, 72, 216);
-	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	float: left;
 }
 
 body header nav{
 	display: inline-block;
 	width: 100%;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	display: inline-flex;
+	justify-content: left;
+	align-items: center;
 }
 
 body header nav a{
