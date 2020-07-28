@@ -8,6 +8,7 @@
 	--gbg-background-light-purple-rgba-85pct: rgba(246, 239, 247, 85%);
 	--dark-grey-text-rgb: rgb(48, 46, 51);
 	/* Fallback values defined as 0 to ensure cross-browser support. Search string "Fallback" */
+	/* Insets for mobile devices commented out while I try to figure out why this didn't work - possibly due to width=device-width in the HTML meta tag? */
 	--safe-area-inset-left: 0; /* Fallback for desktop browsers not recognizing evv() or safe areas */
 	--safe-area-inset-left: env(safe-area-inset-left);
 	--safe-area-inset-right: 0; /* Fallback for desktop browsers not recognizing env() or safe areas */
