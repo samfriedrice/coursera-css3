@@ -1,3 +1,14 @@
+/* Set global custom variables */
+
+:root{
+	/* Branding Colors */
+	/* Note: Several elements have fallback colors defined in the case of no var() support. Search string "Compatibility" */
+	--gbg-dark-purple-rgb: rgb(121, 72, 216);
+	--gbg-background-light-purple-rgb: rgb(246, 239, 247);
+	--gbg-background-light-purple-rgba-85pct: rgba(246, 239, 247, 85%);
+	--dark-grey-text-rgb: rgb(48, 46, 51);
+};
+
 /* Set size of body and base font */
 
 * {
@@ -10,7 +21,8 @@ body{
 	margin: 0%;
 	width: 100vw;
 	font-size: calc(8px + 0.5vw);
-	background-color: rgb(246, 239, 247);
+	background-color: rgb(246, 239, 247); /* IE Compatibility (can't use var) */
+	background-color: var(--gbg-background-light-purple-rgb);
 }
 
 .hidden-header{
@@ -23,8 +35,8 @@ body{
 body header{
 	width: 100%;
 	height: 15vh;
-	/* background-color: rgb(246, 239, 247); */
-	background-color: rgb(121, 72, 216);
+	background-color: rgb(121, 72, 216); /* IE Compatibility (Can't use var) */
+	background-color: var(--gbg-dark-purple-rgb);
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -84,7 +96,8 @@ body header nav a:active{
 
 /* Styling the Cover Photo on Index Page */
 body main aside{
-	background: rgb(246, 239, 247) url(../images/iphone-and-laptop-darkened.jpg) no-repeat;
+	background: rgb(246, 239, 247) url(../images/iphone-and-laptop-darkened.jpg) no-repeat; /* Ancient IE Compatibility (can't use var) */;
+	background: var(--gbg-background-light-purple-rgb) url(../images/iphone-and-laptop-darkened.jpg) no-repeat;
 	background-size: 100% auto;
 	width: 100%;
 	height: 85vh;
@@ -95,8 +108,8 @@ body main aside{
 }
 
 body main aside div{
-	background-color: rgb(246, 239, 247); /*Added for compatibility with older IE/Edge versions*/
-	background-color: rgba(246, 239, 247, 85%);
+	background-color: rgb(246, 239, 247) /* Truly ancient IE/Edge Compatibility (can't use var) */;
+	background-color: var(--gbg-background-light-purple-rgba-85pct);
 	text-align: center;
 	display: inline-block;
 	border-radius: 10px;
@@ -105,14 +118,16 @@ body main aside div{
 
 body main aside div h2{
 	font-size: calc(300% + 0.5vw);
-	color: rgb(121, 72, 216);
+	color: rgb(121, 72, 216); /* IE Compatibility (Can't use var) */
+	color: var(--gbg-dark-purple-rgb);
 	margin-top: 5%;
 	margin-bottom: 2%;
 }
 
 body main aside div p{
 	font-size: calc(100% + 0.5vw);
-	color: rgb(48, 46, 51);
+	color: rgb(48, 46, 51); /* IE Compatibility (Can't use var) */
+	color: var(--dark-grey-text-rgb);
 	margin-bottom: 2.5%;
 }
 
@@ -136,17 +151,19 @@ body main div.card div.cardTextLeft{
 	float: left;
 	height: 100%;
 	width: 50%;
-	color: rgb(121, 72, 216);
 }
 
 body main div.card div.cardTextLeft div.cardTextContainer h2{
 	margin-bottom: 2.5%;
 	font-size: calc(200% + 0.5vw);
+	color: rgb(121, 72, 216); /* IE Compatibility (Can't use var) */
+	color: var(--gbg-dark-purple-rgb);
 }
 
 body main div.card div.cardTextLeft div.cardTextContainer p{
 	font-size: calc(80% + 0.5vw);
-	color: rgb(48, 46, 51);
+	color: rgb(48, 46, 51); /*IE Compatibility (Can't use var) */
+	color: var(--dark-grey-text-rgb);
 }
 
 body main div.card div.cardImageRight{
