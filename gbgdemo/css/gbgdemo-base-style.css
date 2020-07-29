@@ -9,10 +9,6 @@
 	--dark-grey-text-rgb: rgb(48, 46, 51);
 	/* Fallback values defined as 0 to ensure cross-browser support. Search string "Fallback" */
 	/* Insets for mobile devices commented out while I try to figure out why this didn't work - possibly due to width=device-width in the HTML meta tag? */
-	--safe-area-inset-left: 0; /* Fallback for desktop browsers not recognizing evv() or safe areas */
-	--safe-area-inset-left: env(safe-area-inset-left);
-	--safe-area-inset-right: 0; /* Fallback for desktop browsers not recognizing env() or safe areas */
-	--safe-area-inset-right: env(safe-area-inset-right);
 };
 
 /* Set size of body and base font */
@@ -55,10 +51,6 @@ body header nav{
 	display: inline-flex;
 	justify-content: left;
 	align-items: center;
-	padding-left: 0;
-	padding-left: var(--safe-area-inset-right);
-	padding-right: 0;
-	padding-right: var(--safe-area-inset-right);
 }
 
 body header nav a{
@@ -106,8 +98,8 @@ body header nav a:active{
 
 /* Styling the Cover Photo on Index Page */
 body main aside{
-	background: rgb(246, 239, 247), url("../images/iphone-and-laptop-darkened.jpg"), no-repeat; /* Ancient IE Compatibility (can't use var) */
-	/* background: var(--gbg-background-light-purple-rgb) url(../images/iphone-and-laptop-darkened.jpg) no-repeat; */
+	background: rgb(246, 239, 247) url(../images/iphone-and-laptop-darkened.jpg) no-repeat; /* IE Compatibility (no var) */
+	background: var(--gbg-background-light-purple-rgb) url(../images/iphone-and-laptop-darkened.jpg) no-repeat;
 	background-size: 100% auto;
 	width: 100%;
 	height: 85vh;
@@ -150,8 +142,7 @@ body main aside div p:last-child{
 body main div.card{
 	height: 60vh;
 	width: 80%;
-	margin: 0% 10%; /* IE Compatibility (Can't use var) */
-	margin: 0% max(10%, var(--safe-area-inset-left), var(--safe-area-inset-right));
+	margin: 0% 10%;
 	display: inline-block;
 }
 
@@ -215,6 +206,15 @@ body main div.card div.cardImageRight img{
 	body main div.card div.cardImageRight img{
 		width: 90%;
 		height: auto;
+	}
+	@supports(padding: max(0px)){
+		body main div.card{
+			margin: 0% max(10%, env(safe-area-inset-left), env(safe-area-inset-right));
+		}
+		body header nav{
+			padding-left: env(safe-area-inset-left);
+			padding-right: enf(safe-area-inset-right);
+		}
 	}
 }
 
