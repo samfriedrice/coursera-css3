@@ -94,8 +94,10 @@ body header nav a:active{
 
 /* Styling the Cover Photo on Index Page */
 body main aside{
-	background: rgb(246, 239, 247) url(../images/iphone-and-laptop-darkened.jpg) no-repeat; /*Compatibility with older IE/Edge versions*/
-	background: var(--gbg-background-light-purple-rgb) url(../images/iphone-and-laptop-darkened.jpg) no-repeat;
+	background-color: rgb(246, 239, 247); /*Compatibility with older IE/Edge versions*/
+	background-color: var(--gbg-background-light-purple-rgb);
+	background-image: url(../images/iphone-and-laptop-darkened.jpg);
+	background-repeat: no-repeat;
 	background-size: 100% auto;
 	width: 100%;
 	height: 85vh;
